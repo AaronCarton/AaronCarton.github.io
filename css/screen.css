@@ -3,21 +3,37 @@
 \*------------------------------------*/
 
 @font-face {
-	font-family: 'Clear Sans Web';
-	font-weight: 200;
-	src: url('../fonts/ClearSans-Light-webfont.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Clear Sans Web';
+	font-family: 'Dosis';
 	font-weight: 400;
-	src: url('../fonts/ClearSans-Regular-webfont.woff') format('woff');
+	src: url('../fonts/Dosis-Regular.ttf') format('ttf');
 }
 
 @font-face {
-	font-family: 'Clear Sans Web';
+	font-family: 'Dosis';
+	font-weight: 500;
+	src: url('../fonts/Dosis-Medium.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'Dosis';
 	font-weight: 600;
-	src: url('../fonts/ClearSans-Medium-webfont.woff') format('woff');
+	src: url('../fonts/Dosis-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'Dosis';
+	font-weight: 700;
+	src: url('../fonts/Dosis-Bold.ttf') format('ttf');
+}
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root {
+	--background-color-primary: #64D5F7;
+	--background-color-secondary: #66F4FD;
+	--font-color: #000000;
 }
 
 /*------------------------------------*\
@@ -31,10 +47,12 @@
 */
 
 html {
-	font-size: 18px;
+	font-size: 30px;
 	line-height: 32px;
-	font-family: 'Clear Sans Web', Helvetica, arial, sans-serif;
-	font-weight: 200;
+	font-family: 'Dosis', Helvetica, arial, sans-serif;
+	font-weight: 600;
+	background: linear-gradient(180deg, var(--background-color-primary), var(--background-color-secondary));
+    color: var(--font-color);
 	background-attachment: fixed;
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
