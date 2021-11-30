@@ -260,6 +260,14 @@ a:focus {
 	max-width: 71em; /* 71 * 18px = 1278px */
 }
 
+.o-container--primary {
+	height: 5vh;
+}
+
+.o-container--secondary {
+	height: 85vh;
+}
+
 /*
     Objects: section
     ---
@@ -346,6 +354,10 @@ a:focus {
 
 .o-layout--row-reverse {
 	flex-direction: row-reverse;
+}
+
+.o-layout--column {
+	flex-direction: column;
 }
 
 /* Horizontal alignment modifiers*/
@@ -472,6 +484,30 @@ a:focus {
 }
 
 /*
+	Component: Weather Icon
+*/
+.c-weather-icon {
+	height: 32px;
+	display: flex;
+	height: 100%;
+}
+
+.c-detail-icon {
+	height: 32px;
+	display: flex;
+	height: 100%;
+}
+
+/*
+	Component: Degree symbol
+*/
+.c-degree-symbol {
+    position: absolute;
+    top: -50%;
+    right: -60%;
+	font-size: 60%;
+}
+/*	
     Component: header
     ---
     Main header of the website
@@ -708,18 +744,25 @@ a:focus {
 	position: relative;
 }
 
-.c-lead--md {
-	font-size: 18px;
+.c-lead--sm {
+	font-size: 15px;
 	line-height: 32px;
 }
 
-.c-lead--lg {
+.c-lead--md {
 	font-size: 20px;
+	line-height: 32px;
+	opacity: 50%;
+}
+
+.c-lead--lg {
+	font-size: 25px;
+	font-weight: 500;
 	line-height: 32px;
 }
 
 .c-lead--xl {
-	font-size: 32px;
+	font-size: 80px;
 	line-height: 40px;
 }
 
@@ -824,6 +867,15 @@ a:focus {
 \*------------------------------------*/
 
 /*
+	Utility: Transparent
+	---
+	Lower transparency of an element
+*/
+.u-transparent {
+	opacity: 0.5;
+}
+
+/*
     Utilities: color
     ---
     Utility classes to put specific colors onto elements
@@ -887,7 +939,7 @@ a:focus {
 */
 
 .u-max-width-xs {
-	max-width: 18em !important;
+	max-width: 8em !important;
 }
 
 .u-max-width-sm {
