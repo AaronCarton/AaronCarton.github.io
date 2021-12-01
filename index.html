@@ -17,27 +17,34 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/rain.css">
     <script src="script/datahandler.js"></script>
     <script src="script/app.js"></script>
 </head>
 
-<body>
-    <section class="o-container--primary">
+<body class="is-rainy">
+    <!-- <div class="rain-effect">
+        <div class="rain front-row"></div>
+        <div class="rain back-row"></div>
+    </div> -->
+    <section class="o-container o-container--primary o-container--hidden">
         <!-- <section class="o-row o-row--md o-row__nav o-row__sticky"> -->
-        <div class="">
-            <div class="c-header o-layout--align-center">
-                <p>
-                    <a class="c-link-cta" href="#!"> Pick A Plan </a>
-                </p>
+        <div class="o-layout u-mlr-md o-layout--align-center o-layout--justify-space-between">
+            <p class="js-city c-lead--md mr">Heule</p>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
             </div>
         </div>
     </section>
-    <section>
+    <section class="o-container--secondary o-container--hidden">
         <div
-            class="o-container o-container--secondary o-layout o-layout--column o-layout--justify-space-evenly u-max-width-xs">
+            class="o-container o-container--tertiary o-layout o-layout--column o-layout--justify-space-evenly u-max-width-xs">
             <div class="icon">
                 <div class="o-layout o-layout--column o-layout--align-center">
-                    <div class="c-weather-icon">
+                    <div class="js-weatherIcon c-weather-icon">
                         <svg width="240" height="240" viewBox="0 0 240 240" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -49,7 +56,7 @@
                         </svg>
 
                     </div>
-                    <p class="c-lead c-lead--lg">
+                    <p class="c-lead c-lead--lg js-weatherPhrase">
                         Some weather text
                     </p>
                 </div>
@@ -57,27 +64,27 @@
             <div class="info">
                 <div class="temperature">
                     <div class="o-layout o-layout--column o-layout--align-center u-mb-sm">
-                        <p class="c-lead c-lead--xl">7<span class="c-degree-symbol">°</span></p>
-                        <p class="c-lead c-lead--md u-transparent">feels like 3°</p>
+                        <p class="c-lead c-lead--xl js-temp">7<span class="c-degree-symbol">°</span></p>
+                        <p class="c-lead c-lead--md u-transparent">feels like <span class="js-realTemp">0</span>°</p>
                     </div>
                 </div>
                 <div class="details">
-                    <div class="o-layout o-layout--justify-space-between u-transparent">
+                    <div class="o-layout o-layout--justify-space-between u-transparent  o-layout---no-wrap">
                         <div class="o-layout o-layout--column o-layout--align-center o-layout--justify-center">
-                            <div class="c-detail-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                            <a class="c-detail-icon" title="UV index">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="100%"
                                     fill="#000000">
                                     <path d="M0 0h24v24H0V0z" fill="none" />
                                     <path
                                         d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79zM1 10.5h3v2H1zM11 .55h2V3.5h-2zm8.04 2.495l1.408 1.407-1.79 1.79-1.407-1.408zm-1.8 15.115l1.79 1.8 1.41-1.41-1.8-1.79zM20 10.5h3v2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm-1 4h2v2.95h-2zm-7.45-.96l1.41 1.41 1.79-1.8-1.41-1.41z" />
                                 </svg>
-                            </div>
-                            <p class="c-lead c-lead--sm">Low</p>
+                            </a>
+                            <p class="c-lead c-lead--sm js-uvIndex">Low</p>
                         </div>
                         <div class="o-layout o-layout--column o-layout--align-center o-layout--justify-center">
-                            <div class="c-detail-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
-                                    viewBox="0 0 24 24" width="24px" fill="#000000">
+                            <a class="c-detail-icon" title="Wind speed">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="100%"
+                                    viewBox="0 0 24 24" width="100%" fill="#000000">
                                     <g>
                                         <path d="M0,0h24v24H0V0z" fill="none" />
                                     </g>
@@ -88,19 +95,19 @@
                                         </g>
                                     </g>
                                 </svg>
-                            </div>
-                            <p class="c-lead c-lead--sm">621km/h</p>
+                            </a>
+                            <p class="c-lead c-lead--sm"><span class="js-windSpeed">0</span>km/h</p>
                         </div>
                         <div class="o-layout o-layout--column o-layout--align-center o-layout--justify-center">
-                            <div class="c-detail-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                            <a class="c-detail-icon" title="Air Quality">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="100%"
                                     fill="#000000">
                                     <path d="M0 0h24v24H0V0z" fill="none" />
                                     <path
                                         d="M10 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM6 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12-8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-4 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm4-4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4-4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4-4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
                                 </svg>
-                            </div>
-                            <p class="c-lead c-lead--sm">Good</p>
+                            </a>
+                            <p class="c-lead c-lead--sm js-aqi">Good</p>
                         </div>
                     </div>
                 </div>
