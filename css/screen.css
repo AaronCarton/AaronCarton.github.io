@@ -34,6 +34,7 @@
 	--background-color-primary: #5e5e5e;
 	--background-color-secondary: #3b3b3b;
 	--font-color: #000000;
+	--icon-color: #000000;
 }
 
 /*------------------------------------*\
@@ -48,14 +49,14 @@
 }
 
 .is-sunny {
-	--background-color-primary: #FFEF8B;
-	--background-color-secondary: #E3A175;
+	--background-color-primary: #ffc38b;
+    --background-color-secondary: #ede653;
 	--font-color: #000000;
 }
 
 .is-cloudy {
-	--background-color-primary: #5e5e5e;
-	--background-color-secondary: #3b3b3b;
+	--background-color-primary: #818181;
+    --background-color-secondary: #8c8c8c;
 	--font-color: #000000;
 }
 
@@ -77,12 +78,12 @@
 	--font-color: #000000;
 }
 
-.is-night {
-	--background-color-primary: #64D5F7;
-	--background-color-secondary: #66F4FD;
-	--font-color: #000000;
+.dark-mode {
+	--background-color-primary: #414141 !important;
+	--background-color-secondary: #313131 !important;
+	--font-color: #f5f5f5 !important;
+	--icon-color: #f5f5f5 !important;
 }
-
 
 /*------------------------------------*\
   #GENERIC
@@ -313,7 +314,7 @@ a:focus {
 }
 
 .o-container--primary {
-	height: 5vh;
+	height: 3.7vh;
 	transition: opacity 1s ease-in-out;
 }
 
@@ -623,6 +624,10 @@ a:focus {
 .c-detail-icon {
 	height: auto;
     width: 40%;
+}
+
+.c-detail-icon > svg {
+	fill: var(--icon-color);
 }
 
 /*
@@ -1026,6 +1031,10 @@ a:focus {
     Utility classes to put specific margins and paddings onto elements
 */
 
+.u-mt-sm {
+	margin-top: 8px !important;
+}
+
 .u-pt-clear {
 	padding-top: 0 !important;
 }
@@ -1069,7 +1078,7 @@ a:focus {
 */
 
 .u-max-width-xs {
-	max-width: 8em !important;
+	max-width: 10em !important;
 }
 
 .u-max-width-sm {
